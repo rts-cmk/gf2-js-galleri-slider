@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="slider.js" defer></script>
+    <title>gallery</title>
+</head>
+
+<body>
+    <section class="slider">
+        <!-- slideren bygges op med  div'er som skjules og vises -->
+        <div class="slider__slide">
+            <img class="slider__image" src="imgs/landscape1.jpg" alt="landscape">
+        </div>
+        <div class="slider__slide">
+            <img class="slider__image" src="imgs/landscape2.jpg" alt="landscape">
+        </div>
+        <div class="slider__slide">
+            <img class="slider__image" src="imgs/landscape3.jpg" alt="landscape">
+        </div>
+        <div class="slider__slide">
+            <img class="slider__image" src="imgs/landscape4.jpg" alt="landscape">
+        </div>
+        <div class="slider__slide">
+            <img class="slider__image" src="imgs/landscape5.jpg" alt="landscape">
+        </div>
+        <!-- knapper til at bladre frem og tilbage -->
+        <!-- positioneres med css -->
+        <button class="slider__prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="slider__next"><i class="fa-solid fa-chevron-right"></i></button>
+        <!-- indikatorcirker i bunden tilføjes med javascript i denne div -->
+        <div class="slider__dots"></div>
+    </section>
+</body>
+
+</html>

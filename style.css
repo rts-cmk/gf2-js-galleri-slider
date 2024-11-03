@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* positioner slider-containeren på skærmen */
+.slider {
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh auto 0;
+    position: relative;
+}
+
+/* 
+    Nedenstående for et "rent" skift uden overgang
+    slideren bygges med denne i første omgang 
+    og så ændres den når man tilføjer overgange 
+*/
+.slider__slide {
+    height: 100%;
+}
+
+/* Nedenstående for en overgangseffekt mellem slides */
+/* 
+    alle slides sættes til helt gennemsigtige og 
+    fades ind og ud med klassen --visible 
+*/
+/* .slider__slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 500ms linear;
+} */
+/* 
+    denne klasse viser et slide med overgangseffekt.
+    der er transition for at lave effekt når billedet skjules.
+*/
+/* .slider__slide--visible {
+    opacity: 1;
+    transition: opacity 500ms linear;
+} */
+
+/* billederne fylder helt ud i slide-div'en */
+.slider__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* styling til knapperne i siden  */
+.slider__prev,
+.slider__next {
+    position: absolute;
+    top: 45%;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: hsl(0 0% 100% / 75%);
+    border: none;
+    font-size: 1.25rem;
+    opacity: 0%;
+    transition: all 200ms ease-in-out;
+}
+
+.slider__prev {
+    left: 0;
+}
+.slider__next {
+    right: 0;
+}
+
+.slider:hover .slider__prev,
+.slider:hover .slider__next {
+    opacity: 100%
+}
+.slider:hover .slider__prev {
+    left: 2%;
+}
+.slider:hover .slider__next {
+    right: 2%;
+}
+
+
+/* styling til prikkerne i bunden */
+.slider__dots {
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    padding-block: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    z-index: 2;
+}
+.slider__dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+    box-shadow: 0 0 0.5rem hsl(0 0% 0% / 70%);
+}
+.slider__dot--active {
+    background-color: white;
+    
+}
