@@ -16,30 +16,35 @@
     Nedenstående for et "rent" skift uden overgang
     slideren bygges med denne i første omgang 
     og så ændres den når man tilføjer overgange 
+    begynd med denne
 */
+/*
 .slider__slide {
     height: 100%;
 }
+*/
 
 /* Nedenstående for en overgangseffekt mellem slides */
 /* 
     alle slides sættes til helt gennemsigtige og 
     fades ind og ud med klassen --visible 
+    tilføj dette som det sidste sammen med js. 
+    Se kommentarer i js filen.
 */
-/* .slider__slide {
+.slider__slide {
     position: absolute;
     inset: 0;
     opacity: 0;
     transition: opacity 500ms linear;
-} */
+} 
 /* 
     denne klasse viser et slide med overgangseffekt.
     der er transition for at lave effekt når billedet skjules.
 */
-/* .slider__slide--visible {
+ .slider__slide--visible {
     opacity: 1;
     transition: opacity 500ms linear;
-} */
+} 
 
 /* billederne fylder helt ud i slide-div'en */
 .slider__image {
