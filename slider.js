@@ -37,15 +37,17 @@ function showSlide(index) {
     let dots = document.querySelectorAll(".slider__dot")
 
     slides.forEach(function(slide,i){  
-        // byt display none med claslist remove for at tilføje overgange 
-        slide.style.display = "none"
-        //slide.classList.remove("slider__slide--visible")
+        // begynd med display none for at lave galleriet uden overgange
+        // tilføj visible classen som noget af det sidste
+        //slide.style.display = "none"
+        slide.classList.remove("slider__slide--visible")
         dots[i].classList.remove("slider__dot--active")
     })
     
-    // byt display block med claslist add for at tilføje overgange     
-    slides[index].style.display = "block"
-    //slides[index].classList.add("slider__slide--visible")
+    // begynd med display block for at lave galleriet uden overgange    
+    // tilføj visible classen som noget af det sidste
+    //slides[index].style.display = "block"
+    slides[index].classList.add("slider__slide--visible")
     dots[index].classList.add("slider__dot--active")
 }
 
